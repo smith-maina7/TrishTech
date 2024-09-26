@@ -1,0 +1,147 @@
+[
+  {
+    "id": 1,
+    "name": "MacBook Pro",
+    "type": "Laptop",
+    "reviews": [
+      {
+        "reviewId": 101,
+        "rating": 4.8,
+        "comment": "Amazing performance and display quality."
+      },
+      {
+        "reviewId": 102,
+        "rating": 4.5,
+        "comment": "Battery life could be better, but overall excellent."
+      }
+    ],
+    "variations": [
+      {
+        "model": "M1 Chip",
+        "ram": "16GB",
+        "storage": "512GB"
+      },
+      {
+        "model": "M1 Pro Chip",
+        "ram": "32GB",
+        "storage": "1TB"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Dell XPS 13",
+    "type": "Laptop",
+    "reviews": [
+      {
+        "reviewId": 201,
+        "rating": 4.7,
+        "comment": "Lightweight and powerful, perfect for traveling."
+      },
+      {
+        "reviewId": 202,
+        "rating": 4.4,
+        "comment": "Great performance, but keyboard could be improved."
+      }
+    ],
+    "variations": [
+      {
+        "model": "Intel Core i5",
+        "ram": "8GB",
+        "storage": "256GB"
+      },
+      {
+        "model": "Intel Core i7",
+        "ram": "16GB",
+        "storage": "512GB"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "name": "HP Omen 15",
+    "type": "Gaming Laptop",
+    "reviews": [
+      {
+        "reviewId": 301,
+        "rating": 4.6,
+        "comment": "Handles gaming at high settings effortlessly."
+      },
+      {
+        "reviewId": 302,
+        "rating": 4.3,
+        "comment": "Gets a little hot during heavy gaming sessions."
+      }
+    ],
+    "variations": [
+      {
+        "model": "AMD Ryzen 7",
+        "ram": "16GB",
+        "storage": "1TB"
+      },
+      {
+        "model": "Intel Core i7",
+        "ram": "32GB",
+        "storage": "1TB"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Microsoft Surface Laptop 4",
+    "type": "Laptop",
+    "reviews": [
+      {
+        "reviewId": 401,
+        "rating": 4.7,
+        "comment": "Sleek design and powerful performance."
+      },
+      {
+        "reviewId": 402,
+        "rating": 4.5,
+        "comment": "Excellent battery life and build quality."
+      }
+    ],
+    "variations": [
+      {
+        "model": "Intel Core i5",
+        "ram": "8GB",
+        "storage": "512GB"
+      },
+      {
+        "model": "AMD Ryzen 5",
+        "ram": "16GB",
+        "storage": "1TB"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "name": "Lenovo ThinkPad X1 Carbon",
+    "type": "Business Laptop",
+    "reviews": [
+      {
+        "reviewId": 501,
+        "rating": 4.9,
+        "comment": "Perfect for business use with exceptional keyboard."
+      },
+      {
+        "reviewId": 502,
+        "rating": 4.6,
+        "comment": "Expensive, but worth it for the performance."
+      }
+    ],
+    "variations": [
+      {
+        "model": "Intel Core i5",
+        "ram": "8GB",
+        "storage": "256GB"
+      },
+      {
+        "model": "Intel Core i7",
+        "ram": "16GB",
+        "storage": "1TB"
+      }
+    ]
+  }
+]
