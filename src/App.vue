@@ -4,8 +4,9 @@ import { RouterLink, RouterView } from 'vue-router'
 
 <template>
   <nav>
-    <RouterLink to="/">Home</RouterLink>
-    <RouterLink to="/product-list">Product List</RouterLink>
+    <RouterLink :to="{ name: 'home' }">Home</RouterLink>
+    <RouterLink :to="{ name: 'productList' }">Product List</RouterLink>
+    <RouterLink :to="{ name: 'sports' }">Sports</RouterLink>
   </nav>
 
   <RouterView />

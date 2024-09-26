@@ -1,5 +1,5 @@
 <script setup>
-import products from '/src/computer.json' // Adjust the path if needed
+import products from '/src/computer.json'
 </script>
 
 <template>

@@ -1,0 +1,236 @@
+{
+  "sports": [
+    {
+      "id": 1,
+      "name": "Football",
+      "countries": [
+        {
+          "id": 101,
+          "name": "England",
+          "divisions": [
+            {
+              "id": 1001,
+              "name": "Premier League",
+              "matches": [
+                {
+                  "id": 10001,
+                  "teams": "Manchester United vs Manchester City",
+                  "markets": [
+                    "Match Winner",
+                    "Both Teams to Score",
+                    "Over/Under 2.5 Goals",
+                    "Correct Score"
+                  ]
+                },
+                {
+                  "id": 10002,
+                  "teams": "Chelsea vs Arsenal",
+                  "markets": ["Match Winner", "Total Corners", "Double Chance", "Correct Score"]
+                }
+              ]
+            },
+            {
+              "id": 1110,
+              "name": "Championship",
+              "matches": [
+                {
+                  "id": 11001,
+                  "teams": "Leeds United vs Middlesbrough",
+                  "markets": [
+                    "Match Winner",
+                    "First Team to Score",
+                    "Total Goals",
+                    "Handicap Betting"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 201,
+          "name": "Spain",
+          "divisions": [
+            {
+              "id": 2001,
+              "name": "La Liga",
+              "matches": [
+                {
+                  "id": 20001,
+                  "teams": "Real Madrid vs Barcelona",
+                  "markets": ["Match Winner", "Both Teams to Score", "Total Goals", "Correct Score"]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 301,
+          "name": "Italy",
+          "divisions": [
+            {
+              "id": 3001,
+              "name": "Serie A",
+              "matches": [
+                {
+                  "id": 30005,
+                  "teams": "Juventus vs AC Milan",
+                  "markets": [
+                    "Match Winner",
+                    "Both Teams to Score",
+                    "Total Goals",
+                    "Handicap Betting"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 401,
+          "name": "France",
+          "divisions": [
+            {
+              "id": 4001,
+              "name": "Ligue 1",
+              "matches": [
+                {
+                  "id": 40006,
+                  "teams": "Paris Saint-Germain vs Marseille",
+                  "markets": [
+                    "Match Winner",
+                    "Both Teams to Score",
+                    "Over/Under 2.5 Goals",
+                    "Correct Score"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 501,
+          "name": "Netherlands",
+          "divisions": [
+            {
+              "id": 5001,
+              "name": "Eredivisie",
+              "matches": [
+                {
+                  "id": 50007,
+                  "teams": "Ajax vs PSV",
+                  "markets": [
+                    "Match Winner",
+                    "Both Teams to Score",
+                    "Over/Under 2.5 Goals",
+                    "Correct Score"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Tennis",
+      "divisions": [
+        {
+          "id": 1,
+          "name": "Male",
+          "matches": [
+            {
+              "id": 8,
+              "players": "Novak Djokovic vs Rafael Nadal",
+              "markets": ["Match Winner", "Set Betting", "Total Games", "Handicap Betting"]
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "name": "Female",
+          "matches": [
+            {
+              "id": 9,
+              "players": "Serena Williams vs Naomi Osaka",
+              "markets": ["Match Winner", "Set Betting", "Total Games", "Handicap Betting"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Basketball",
+      "divisions": [
+        {
+          "id": 1,
+          "name": "Male",
+          "matches": [
+            {
+              "id": 10,
+              "teams": "Los Angeles Lakers vs Miami Heat",
+              "markets": ["Match Winner", "Point Spread", "Total Points", "Over/Under"]
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "name": "Female",
+          "matches": [
+            {
+              "id": 11,
+              "teams": "Phoenix Mercury vs Chicago Sky",
+              "markets": ["Match Winner", "Point Spread", "Total Points", "Over/Under"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Hockey",
+      "divisions": [
+        {
+          "id": 1,
+          "name": "Male",
+          "matches": [
+            {
+              "id": 12,
+              "teams": "Toronto Maple Leafs vs Montreal Canadiens",
+              "markets": ["Match Winner", "Total Goals", "First Team to Score", "Handicap Betting"]
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "name": "Female",
+          "matches": [
+            {
+              "id": 13,
+              "teams": "USA vs Canada",
+              "markets": ["Match Winner", "Total Goals", "First Team to Score", "Handicap Betting"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Formula One",
+      "matches": [
+        {
+          "id": 14,
+          "race": "Monaco Grand Prix",
+          "markets": ["Race Winner", "Podium Finish", "Fastest Lap", "Top 6 Finish"]
+        },
+        {
+          "id": 15,
+          "race": "British Grand Prix",
+          "markets": ["Race Winner", "Podium Finish", "Fastest Lap", "Top 6 Finish"]
+        }
+      ]
+    }
+  ]
+}

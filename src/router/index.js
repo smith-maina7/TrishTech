@@ -18,6 +18,26 @@ const router = createRouter({
       path: '/product/:id',
       name: 'product',
       component: () => import('../views/ProductView.vue')
+    },
+    {
+      path: '/sports',
+      name: 'sports',
+      component: () => import('../views/SportsView.vue')
+    },
+    {
+      path: '/sport/:id',
+      name: 'sport',
+      component: () => import('../views/SportView.vue')
+    },
+    {
+      path: '/league/:sportId/:countryId',
+      name: 'league',
+      component: () => import('../views/LeagueView.vue')
+    },
+    {
+      path: '/matchDay/:sportId/:countryId/:leagueId',
+      name: 'matchDay',
+      component: () => import('../views/MatchDayView.vue')
     }
   ]
 })
