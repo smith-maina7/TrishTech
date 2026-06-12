@@ -7,6 +7,7 @@ export const useProductStore = defineStore('product', () => {
   const products = ref<Products[]>([])
   const loading = ref(false)
   const error = ref<string | null>(null)
+  const searchTerm = ref('')
 
   async function fetchProduct(id?: number) {
     loading.value = true
@@ -34,7 +35,8 @@ export const useProductStore = defineStore('product', () => {
     products.value = []
     error.value = null
     loading.value = false
+    searchTerm.value = ''
   }
 
-  return { product, products, loading, error, fetchProduct, clear }
+  return { product, products, loading, error, searchTerm, fetchProduct, clear }
 })
