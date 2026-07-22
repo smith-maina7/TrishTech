@@ -79,34 +79,34 @@ function triggerCheckout() {
 </script>
 
 <template>
-  <main class="mx-auto max-w-6xl px-4 py-6">
+  <main class="w-full">
     <!-- Success checkout modal -->
     <div
       v-if="orderCompleted"
-      class="rounded-3xl border border-slate-200 bg-white p-10 text-center shadow-lg max-w-xl mx-auto my-12"
+      class="mx-auto my-8 max-w-xl rounded-3xl border border-slate-200 bg-white p-6 text-center shadow-lg sm:my-12 sm:p-10"
     >
       <div
         class="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-emerald-100 text-emerald-600 text-3xl"
       >
         ✓
       </div>
-      <h1 class="mt-6 text-3xl font-semibold tracking-tight text-slate-900">
+      <h1 class="mt-6 text-2xl font-semibold tracking-tight text-slate-900 sm:text-3xl">
         Thank you for your order!
       </h1>
       <p class="mt-2 text-slate-600">Your order is being processed and will ship soon.</p>
 
-      <div class="mt-6 rounded-2xl bg-slate-50 p-6 text-left">
+      <div class="mt-6 rounded-2xl bg-slate-50 p-4 text-left sm:p-6">
         <div
-          class="flex justify-between border-b border-slate-200 pb-3 text-sm font-medium text-slate-900"
+          class="flex flex-col gap-1 border-b border-slate-200 pb-3 text-sm font-medium text-slate-900 sm:flex-row sm:justify-between"
         >
           <span>Order Number:</span>
           <span class="font-mono text-indigo-600 font-semibold">{{ orderId }}</span>
         </div>
-        <div class="mt-3 flex justify-between text-sm text-slate-500">
+        <div class="mt-3 flex flex-col gap-1 text-sm text-slate-500 sm:flex-row sm:justify-between">
           <span>Estimated Delivery:</span>
           <span class="font-medium text-slate-700">3-5 Business Days</span>
         </div>
-        <div class="mt-1 flex justify-between text-sm text-slate-500">
+        <div class="mt-1 flex flex-col gap-1 text-sm text-slate-500 sm:flex-row sm:justify-between">
           <span>Shipping Provider:</span>
           <span class="font-medium text-slate-700">TrishTech Premium Logistics</span>
         </div>
@@ -133,7 +133,9 @@ function triggerCheckout() {
     <!-- Active Cart Page -->
     <div v-else>
       <div class="mb-8">
-        <h1 class="text-3xl font-semibold tracking-tight text-slate-900">Your Cart</h1>
+        <h1 class="text-2xl font-semibold tracking-tight text-slate-900 sm:text-3xl">
+          Your Cart
+        </h1>
         <p class="mt-2 text-sm text-slate-500" v-if="cartStore.items.length">
           Review your selection and proceed to secure checkout.
         </p>
@@ -142,7 +144,7 @@ function triggerCheckout() {
       <!-- Empty Cart State -->
       <div
         v-if="!cartStore.items.length"
-        class="rounded-3xl border border-slate-200 bg-white p-12 text-center shadow-sm max-w-2xl mx-auto"
+        class="mx-auto max-w-2xl rounded-3xl border border-slate-200 bg-white p-6 text-center shadow-sm sm:p-12"
       >
         <div
           class="mx-auto flex h-20 w-20 items-center justify-center rounded-full bg-slate-50 text-slate-400 text-4xl mb-6"
@@ -165,12 +167,12 @@ function triggerCheckout() {
       </div>
 
       <!-- Main Columns -->
-      <div v-else class="grid gap-6 lg:grid-cols-3">
+      <div v-else class="grid min-w-0 gap-6 lg:grid-cols-3">
         <!-- Cart Items List (Left 2 columns) -->
-        <div class="lg:col-span-2 space-y-4">
+        <div class="min-w-0 space-y-4 lg:col-span-2">
           <!-- Free Shipping Progress Tracker -->
           <div class="rounded-2xl border border-slate-200 bg-white p-4 shadow-sm">
-            <div class="flex items-center justify-between text-sm">
+            <div class="flex flex-col gap-2 text-sm sm:flex-row sm:items-center sm:justify-between">
               <span
                 v-if="cartStore.subtotal >= cartStore.freeShippingThreshold"
                 class="font-medium text-emerald-600"
@@ -182,7 +184,7 @@ function triggerCheckout() {
                 <strong class="text-slate-900">${{ remainingForFreeShipping.toFixed(2) }}</strong>
                 away from free shipping.
               </span>
-              <span class="text-xs font-semibold text-slate-500"
+              <span class="shrink-0 text-xs font-semibold text-slate-500"
                 >${{ cartStore.subtotal.toFixed(2) }} / ${{ cartStore.freeShippingThreshold }}</span
               >
             </div>
@@ -200,10 +202,10 @@ function triggerCheckout() {
               <li
                 v-for="item in cartStore.items"
                 :key="item.product.id"
-                class="flex flex-col p-4 sm:p-6 sm:flex-row sm:items-center sm:justify-between gap-4"
+                class="flex flex-col gap-4 p-4 sm:flex-row sm:items-center sm:justify-between sm:p-6"
               >
                 <!-- Product info -->
-                <div class="flex items-center gap-3 flex-1 min-w-0">
+                <div class="flex min-w-0 flex-1 items-start gap-3 sm:items-center">
                   <div
                     class="h-16 w-16 flex-shrink-0 overflow-hidden rounded-2xl bg-slate-50 p-2 border border-slate-100"
                   >
@@ -217,7 +219,7 @@ function triggerCheckout() {
                     <p class="text-[10px] font-bold uppercase tracking-wider text-indigo-600">
                       {{ item.product.category }}
                     </p>
-                    <h3 class="mt-1 text-base font-semibold text-slate-900 truncate">
+                    <h3 class="mt-1 break-words text-base font-semibold leading-snug text-slate-900">
                       {{ item.product.title }}
                     </h3>
                     <p class="mt-1 text-sm text-slate-500">
@@ -228,7 +230,7 @@ function triggerCheckout() {
 
                 <!-- Quantity & Price controls -->
                 <div
-                  class="flex items-center justify-between sm:justify-end gap-6 sm:gap-8 border-t sm:border-t-0 pt-4 sm:pt-0"
+                  class="grid grid-cols-[auto_minmax(0,1fr)_auto] items-center gap-3 border-t pt-4 sm:flex sm:w-auto sm:justify-end sm:gap-6 sm:border-t-0 sm:pt-0 lg:gap-8"
                 >
                   <!-- Quantity adjuster -->
                   <div
@@ -254,7 +256,7 @@ function triggerCheckout() {
                   </div>
 
                   <!-- Item Total Price -->
-                  <div class="w-20 text-right">
+                  <div class="min-w-20 justify-self-end text-right">
                     <span class="text-base font-bold text-slate-900"
                       >${{ (item.product.price * item.quantity).toFixed(2) }}</span
                     >
@@ -287,7 +289,7 @@ function triggerCheckout() {
 
             <!-- Clear Cart Option -->
             <div
-              class="bg-slate-50 px-6 py-4 flex justify-between items-center border-t border-slate-100 text-sm"
+              class="flex flex-col gap-3 border-t border-slate-100 bg-slate-50 px-4 py-4 text-sm sm:flex-row sm:items-center sm:justify-between sm:px-6"
             >
               <span class="text-slate-500">Items are saved automatically.</span>
               <button
@@ -301,9 +303,9 @@ function triggerCheckout() {
         </div>
 
         <!-- Checkout Summary Column (Right 1 column) -->
-        <div class="space-y-4">
+        <div class="min-w-0 space-y-4">
           <div
-            class="rounded-3xl border border-slate-200 bg-white p-4 shadow-sm space-y-4 sticky top-20"
+            class="space-y-4 rounded-3xl border border-slate-200 bg-white p-4 shadow-sm lg:sticky lg:top-20"
           >
             <h2 class="text-lg font-semibold text-slate-900">Order Summary</h2>
 
@@ -317,9 +319,9 @@ function triggerCheckout() {
               <!-- Promo Code row if applied -->
               <div
                 v-if="appliedPromoCode"
-                class="flex justify-between text-emerald-600 font-medium"
+                class="flex flex-col gap-1 font-medium text-emerald-600 sm:flex-row sm:justify-between"
               >
-                <span class="flex items-center gap-1.5">
+                <span class="flex flex-wrap items-center gap-1.5">
                   🏷️ Discount ({{ appliedPromoCode }})
                   <button @click="removePromoCode" class="text-[10px] text-red-500 hover:underline">
                     Remove
@@ -357,7 +359,7 @@ function triggerCheckout() {
                 class="text-xs font-semibold text-slate-500 uppercase tracking-wider"
                 >Promo Code</label
               >
-              <div class="flex gap-2">
+              <div class="flex flex-col gap-2 sm:flex-row">
                 <input
                   id="promo-code"
                   v-model="promoInput"
@@ -368,7 +370,7 @@ function triggerCheckout() {
                 />
                 <button
                   @click="applyPromoCode"
-                  class="rounded-full bg-slate-900 px-4 py-2 text-xs font-semibold text-white hover:bg-slate-800 transition"
+                  class="rounded-full bg-slate-900 px-4 py-2 text-xs font-semibold text-white transition hover:bg-slate-800"
                 >
                   Apply
                 </button>
@@ -383,7 +385,7 @@ function triggerCheckout() {
             <button
               @click="triggerCheckout"
               :disabled="isCheckingOut"
-              class="w-full flex justify-center items-center rounded-full bg-indigo-600 py-3.5 text-sm font-semibold text-white shadow-lg shadow-indigo-600/10 hover:bg-indigo-500 hover:-translate-y-0.5 transition active:translate-y-0 disabled:opacity-75 disabled:cursor-not-allowed"
+              class="flex w-full items-center justify-center rounded-full bg-indigo-600 px-4 py-3.5 text-center text-sm font-semibold text-white shadow-lg shadow-indigo-600/10 transition hover:-translate-y-0.5 hover:bg-indigo-500 active:translate-y-0 disabled:cursor-not-allowed disabled:opacity-75"
             >
               <span
                 v-if="isCheckingOut"
@@ -399,7 +401,7 @@ function triggerCheckout() {
                 <span>Secure SSL encrypted payments & private checkout</span>
               </div>
               <!-- Simulated payment logos -->
-              <div class="flex gap-2 justify-center pt-1 text-slate-300">
+              <div class="flex flex-wrap justify-center gap-2 pt-1 text-slate-300">
                 <span
                   class="rounded border border-slate-200 px-1.5 py-0.5 text-[10px] font-bold text-slate-400 uppercase tracking-wider bg-slate-50"
                   >Visa</span
